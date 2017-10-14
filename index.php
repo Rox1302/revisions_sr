@@ -1,6 +1,7 @@
 <?php
   session_start();
   include './includes/PDO.php';
+  include './includes/cookieconnect.php';
 ?>
 
 <!DOCTYPE html>
