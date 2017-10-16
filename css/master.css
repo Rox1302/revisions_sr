@@ -12,9 +12,44 @@ body
   background-color: #333;
 }
 
+.menu_compte
+{
+  float: left;
+  display: none;
+  position: absolute;
+  /*left: 140px;
+  top: 0px;*/
+  margin: 0px;
+  padding: 0px;
+  background-color: #333;
+  list-style-type: none;
+  color: white;
+  width: 140px;
+}
+
+.li_compte
+{
+  float: left;
+  width: 140px;
+}
+
+.li_compte:hover .menu_compte
+{
+  display: block;
+}
+
 li
 {
   float: left;
+}
+
+.li_menu_li
+{
+  display: block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
 }
 
 li a
