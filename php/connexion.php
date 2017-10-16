@@ -74,7 +74,7 @@ include '../includes/PDO.php';
   </header>
 
   <body>
-    <form action="connection.php" method="POST">
+    <form action="connexion.php" method="POST">
       Mail <input type="text" name="mail_connect" required>
       <br>
       Mot de passe <input type="password" name="mdp_connect" value="">
