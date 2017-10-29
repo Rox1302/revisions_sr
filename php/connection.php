@@ -74,18 +74,36 @@ include '../includes/PDO.php';
   </header>
 
   <body>
-    <form action="connexion.php" method="POST">
-      Mail <input type="text" name="mail_connect" required>
-      <br>
-      Mot de passe <input type="password" name="mdp_connect" value="">
-      <br><br>
-      <input type="checkbox" checked="checked" name="souvenir"> Se souvenir de moi
-      <br>
-      <a href="#">Mot de passe oublié ?</a>
-      <br><br>
-      <button class="bouton_1" type="submit" name="option" value="connexion">Valider</button>
-    </form>
+    <div class="connection">
 
-    Pas encore inscrit ? Inscris-toi <a href="inscription.php">ici</a>
+      <form class="form_connection" action="connexion.php" method="POST">
+
+        <div class="conteneur">
+          <div class="connection_colonne1">
+            <div class="element">
+              Mail
+            </div>
+            <div class="element">
+              Mot de passe
+            </div>
+          </div>
+
+          <div class="connection_colonne2">
+            <input type="text" name="mail_connect" required>
+            <br>
+            <input type="password" name="mdp_connect" value="" required>
+          </div>
+        </div>
+
+        <br><br>
+        <input type="checkbox" checked="checked" name="souvenir"> Se souvenir de moi
+        <br><br>
+        <a class="liens_black" href="#">Mot de passe oublié ?</a>
+        <br><br>
+        <button class="bouton_1" type="submit" name="option" value="connexion">Valider</button>
+      </form>
+
+      Pas encore inscrit ? Inscris-toi <a class="liens_black" href="inscription.php">ici</a>
+    </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <ul class="menu">
   <li>
-    <a href="#home">Accueil</a>
+    <a href="../index.php">Accueil</a>
   </li>
   <li>
     <a href="#definition">Définition</a>
@@ -10,7 +10,7 @@
       if(!isset($_SESSION["pseudo"]))
       {
         ?>
-        <a href="./php/connexion.php">Connexion</a>
+        <a href="./php/connection.php">Connexion</a>
         <?php
       }
       else

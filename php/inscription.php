@@ -122,39 +122,74 @@ if(isset($_POST["nom"]) AND isset($_POST["prenom"]) AND isset($_POST["pseudo"]) 
   </header>
 
   <body>
-    <form action="inscription.php" method="post">
-      Nom <input type="text" name="nom" value="" required>
-      <br>
-      Prénom<input type="text" name="prenom" value="" required>
-      <br>
-      Pseudo <input type="text" name="pseudo" value="" required>
-      <br>
-      Mail<input type="mail" name="mail" value="" required>
-      <br>
-      Mot de passe<input type="password" name="mdp" value="" required>
-      <br>
-      Semestre <select name="semestre">
-        <option value="semestre_1">Semestre 1</option>
-        <option value="semestre_2">Semestre 2</option>
-        <option value="semestre_3_sr">Semestre 3 SR </option>
-        <option value="semestre_3_il">Semestre 3 IL</option>
-        <option value="semestre_4_sr">Semestre 4 SR </option>
-        <option value="semestre_4_il">Semestre 4 IL</option>
-        <option value="semestre_5_sr">Semestre 5 SR </option>
-        <option value="semestre_5_il">Semestre 5 IL</option>
-      </select>
-      <br><br>
-      <button class="bouton_1" type="submit" name="option" value="inscription">Valider</button>
 
-    </form>
-    <br>
-    <?php
-    if(isset($erreur_mail) OR isset($erreur_pseudo))
-    {
-      echo "Une erreur s'est produite. Votre adresse mail ou votre pseudo est déjà utilisé.";
-    }
-    ?>
+    <div class="inscription">
+      <h2>INSCRIPTION</h2>
 
-    Déjà inscrit ? Connectez-vous <a href="connection.php">ici</a>
+        <form class="form_inscription" action="inscription.php" method="post">
+          <div class="conteneur">
+            <div class="colonne1">
+              <div class="element">
+                Nom
+              </div>
+
+              <div class="element">
+                Prénom
+              </div>
+
+              <div class="element">
+                Pseudo
+              </div>
+
+              <div class="element">
+                Mail
+              </div>
+
+              <div class="element">
+                Mot de passe
+              </div>
+
+              <div class="element">
+                Semestre
+              </div>
+            </div>
+
+            <div class="colonne2">
+              <input class="input_inscription" type="text" name="nom" value="" required>
+              <br>
+              <input class="input_inscription" type="text" name="prenom" value="" required>
+              <br>
+              <input class="input_inscription" type="text" name="pseudo" value="" required>
+              <br>
+              <input class="input_inscription" type="mail" name="mail" value="" required>
+              <br>
+              <input class="input_inscription" type="password" name="mdp" value="" required>
+              <br>
+              <select class="select_inscription" name="semestre">
+                <option value="semestre_1">Semestre 1</option>
+                <option value="semestre_2">Semestre 2</option>
+                <option value="semestre_3_sr">Semestre 3 SR </option>
+                <option value="semestre_3_il">Semestre 3 IL</option>
+                <option value="semestre_4_sr">Semestre 4 SR </option>
+                <option value="semestre_4_il">Semestre 4 IL</option>
+                <option value="semestre_5_sr">Semestre 5 SR </option>
+                <option value="semestre_5_il">Semestre 5 IL</option>
+              </select>
+            </div>
+          </div>
+          <br><br>
+          <button class="bouton_1" type="submit" name="option" value="inscription">Valider</button>
+        </form>
+
+
+      <?php
+      if(isset($erreur_mail) OR isset($erreur_pseudo))
+      {
+        echo "Une erreur s'est produite. Votre adresse mail ou votre pseudo est déjà utilisé.";
+      }
+      ?>
+      <br>
+      Déjà inscrit ? Connectez-vous <a class="liens_black" href="connection.php">ici</a>
+    </div>
   </body>
 </html>
