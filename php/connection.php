@@ -3,7 +3,7 @@ session_start();
 
 /* ----------------------------------------------- //
 Améliorations à faire :
-- ajout de la focntinnalité de mot de passe oublié
+- ajout de la fonctinnalité de mot de passe oublié
 - css
 - test
 // ----------------------------------------------- */
@@ -14,8 +14,8 @@ include '../includes/PDO.php';
 // VERIFICATION DES INFORMATIONS DU FORMULAIRE
   if(isset($_POST["mail_connect"]) AND isset($_POST["mdp_connect"]))
   {
-    $mail_connect = $_POST["mail_connect"];
-    $mdp_connect = $_POST["mdp_connect"];
+    $mail_connect = htmlspecialchars($_POST["mail_connect"]);
+    $mdp_connect = htmlspecialchars($_POST["mdp_connect"]);
 
     // On vérifie que le mail existe dans la base de données
     $requser = $bdd->prepare("SELECT * FROM user WHERE mail = ?");
@@ -38,7 +38,7 @@ include '../includes/PDO.php';
   			// Si elles sont correctes
   			$userinfo = $requser2->fetch();
 
-        // Création d'un cookie
+        // Création d'un cookie --------------------------------
         if(isset($_POST["souvenir"]) /*AND $_POST["souvenir"] == "on"*/)
 				{
 					$temps=365*24*3600;
@@ -49,8 +49,8 @@ include '../includes/PDO.php';
 
           // CONNEXION ET REDIRECTION VERS L'INDEX
           $_SESSION['pseudo'] = $userinfo['pseudo'];
-          header('Location: ../index.php');
 				} // ---------------------------------------------------
+        header('Location: ../index.php');
   		}
   		else
   		{
@@ -75,8 +75,7 @@ include '../includes/PDO.php';
 
   <body>
     <div class="connection">
-
-      <form class="form_connection" action="connexion.php" method="POST">
+      <form class="form_connection" action="" method="POST">
 
         <div class="conteneur">
           <div class="connection_colonne1">
