@@ -1,6 +1,12 @@
 body
 {
   background-color: #8BAC65;
+  font-family: "Roboto Lt","Segoe UI Light";
+}
+
+input
+{
+  font-family: "Roboto Lt","Segoe UI Light";
 }
 
 /* MENU =========================================*/

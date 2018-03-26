@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 /* ----------------------------------------------- //
 Améliorations à faire :
 - ajout de la fonctinnalité de mot de passe oublié
@@ -9,7 +7,7 @@ Améliorations à faire :
 // ----------------------------------------------- */
 
 
-include '../includes/PDO.php';
+include 'PDO.php';
 
 // VERIFICATION DES INFORMATIONS DU FORMULAIRE
   if(isset($_POST["mail_connect"]) AND isset($_POST["mdp_connect"]))
@@ -61,48 +59,33 @@ include '../includes/PDO.php';
 
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/master.css">
-    <title>Système et réseaux</title>
-  </head>
+<div class="connection">
+  <form class="form_connection" action="" method="POST">
 
-  <header>
-    <?php include '../includes/menu.php' ?>
-  </header>
-
-  <body>
-    <div class="connection">
-      <form class="form_connection" action="" method="POST">
-
-        <div class="conteneur">
-          <div class="connection_colonne1">
-            <div class="element">
-              Mail
-            </div>
-            <div class="element">
-              Mot de passe
-            </div>
-          </div>
-
-          <div class="connection_colonne2">
-            <input type="text" name="mail_connect" required>
-            <br>
-            <input type="password" name="mdp_connect" value="" required>
-          </div>
+    <div class="conteneur">
+      <div class="connection_colonne1">
+        <div class="element">
+          Mail
         </div>
+        <div class="element">
+          Mot de passe
+        </div>
+      </div>
 
-        <br><br>
-        <input type="checkbox" checked="checked" name="souvenir"> Se souvenir de moi
-        <br><br>
-        <a class="liens_black" href="#">Mot de passe oublié ?</a>
-        <br><br>
-        <button class="bouton_1" type="submit" name="option" value="connexion">Valider</button>
-      </form>
-
-      Pas encore inscrit ? Inscris-toi <a class="liens_black" href="inscription.php">ici</a>
+      <div class="connection_colonne2">
+        <input type="text" name="mail_connect" required>
+        <br>
+        <input type="password" name="mdp_connect" value="" required>
+      </div>
     </div>
-  </body>
-</html>
+
+    <br><br>
+    <input type="checkbox" checked="checked" name="souvenir"> Se souvenir de moi
+    <br><br>
+    <a class="liens_black" href="#">Mot de passe oublié ?</a>
+    <br><br>
+    <button class="bouton_1" type="submit" name="option" value="connexion">Valider</button>
+  </form>
+
+  Pas encore inscrit ? Inscris-toi <a class="liens_black" href="inscription.php">ici</a>
+</div>

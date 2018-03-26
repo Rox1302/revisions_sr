@@ -1,7 +1,7 @@
 <?php
   session_start();
-  include './includes/PDO.php';
-  include './includes/cookieconnect.php';
+  include './php/PDO.php';
+  include './php/cookieconnect.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +13,29 @@
   </head>
 
   <header>
-    <?php include './includes/menu.php' ?>
+    <?php include './php/menu.php' ?>
   </header>
 
   <body>
-    lolilol
+    <?php
+    if(isset($_GET["page"]))
+    {
+      switch ($_GET["page"])
+      {
+        case 'connection':
+          include("./php/connection.php");
+          break;
+
+        case 'accueil':
+          include("./php/accueil.php");
+          break;
+
+        default:
+          # code...
+          break;
+      }
+    }
+    ?>
+
   </body>
 </html>
