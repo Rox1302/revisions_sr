@@ -1,8 +1,6 @@
 <ul class="menu">
   <li>
-    <form class="" action="" method="post">
       <a href="./accueil">Accueil</a>
-    </form>
   </li>
   <li>
     <a href="#definition">Définition</a>
@@ -12,9 +10,7 @@
       if(!isset($_SESSION["pseudo"]))
       {
         ?>
-        <form class="" action="" method="post">
           <a href="./connection">Connection</a>
-        </form>
         <?php
       }
       else
