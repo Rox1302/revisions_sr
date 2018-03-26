@@ -48,7 +48,7 @@ include 'PDO.php';
           // CONNEXION ET REDIRECTION VERS L'INDEX
           $_SESSION['pseudo'] = $userinfo['pseudo'];
 				} // ---------------------------------------------------
-        header('Location: ../index.php');
+        header('Location: /revisions_sr/accueil');
   		}
   		else
   		{

@@ -8,5 +8,5 @@ if (isset ($_COOKIE['authentification'])) // Si jamais l'utilisateur n'a pas coc
 }
 
 session_destroy();
-header("Location: ../index.php");
+header('Location: /revisions_sr/');
 ?>

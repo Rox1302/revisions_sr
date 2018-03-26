@@ -16,7 +16,7 @@
       else
       {
         ?>
-        <a href="#compte">Compte</a>
+        <a href="#compte"><?php echo $_SESSION["pseudo"]; ?></a>
         <ul class="menu_compte">
           <li class="li_menu_li">
             <a href="./php/deconnexion.php">Déconnexion</a>
